@@ -1,0 +1,60 @@
+{{ partial "header.html" . }}
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="/"><span class="icon fa-{{ .Params.Icon | default "gem" }}"></span></a>
+                    </div>
+                    <div class="content">
+                        <div class="inner">
+                            <h1>{{ .Title }}</h1>
+                            {{ if .Params.description }}
+                            <p>
+                                {{ .Params.description }}
+                            </p>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            {{ range .Pages.ByDate }}
+                                {{if .Content}}
+                                    <li><a href="#{{ .Title | urlize }}">{{ .Title }}</a></li>
+                                {{ else }}
+                                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </nav>
+                </header>
+
+            <!-- Main -->
+                <div id="main">
+
+                    {{ range .Pages }}
+                        {{if .Content}}
+                        <article id="{{ .Title | urlize }}">
+                            <h2 class="major">{{ .Title }}</h2>
+                            <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
+                            {{ .Content }}
+                        </article>
+                        {{ end }}
+                    {{ end }}
+
+                </div>
+
+                {{ partial "design.html" .}}
+
+        </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+</body>
+
+{{ partial "footer.html" .}}

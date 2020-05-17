@@ -37,8 +37,9 @@ $ git submodule add https://github.com/your-identity/hugo-theme-dimension.git th
 The theme doesn't require any advanced configuration. Just copy:
 
 ```toml
-baseurl = "/"
+baseURL = "http://example.org/"
 languageCode = "en-us"
+title = "My New Hugo Site"
 theme = "dimension"
 ```
 

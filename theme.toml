@@ -5,7 +5,7 @@ description = "A port of HTML5's dimension theme, optimized for markdown based C
 homepage = "https://github.com/your-identity/hugo-theme-dimension/"
 tags = ["blog", "clean", "customizable", "dark", "highlighting", "minimal", "personal", "responsive", "simple", "responsive"]
 features = ["blog", "syntax highlighting"]
-min_version = 0.59.0
+min_version = 0.57
 
 [author]
   name = "d-asnaghi"

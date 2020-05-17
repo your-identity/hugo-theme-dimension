@@ -12,7 +12,7 @@
                     </div>
                     <div class="content">
                         <div class="inner">
-                            <h1>{{ .Title }}</h1>
+                            <h1>{{ .Title | default "Title" }}</h1>
                             {{ if .Params.description }}
                             <p>
                                 {{ .Params.description }}
@@ -37,12 +37,14 @@
                 <div id="main">
 
                     {{ range .Pages }}
-                        {{if .Content}}
-                        <article id="{{ .Title | urlize }}">
-                            <h2 class="major">{{ .Title }}</h2>
-                            <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
-                            {{ .Content }}
-                        </article>
+                        {{if .Content }}
+                            {{if .Title }}
+                            <article id="{{ .Title | urlize }}">
+                                <h2 class="major">{{ .Title }}</h2>
+                                <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
+                                {{ .Content }}
+                            </article>
+                            {{ end }}
                         {{ end }}
                     {{ end }}
 

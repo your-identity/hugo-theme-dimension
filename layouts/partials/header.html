@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
     <style>
-        :root{--site-background : url("{{ .Params.background | default "/images/bg.jpg" }}")};
+        :root{--site-background : url("{{ .Params.background | default "/images/bg.jpg" | absURL }}")};
     </style> 
 </head>

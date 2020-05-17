@@ -2,7 +2,7 @@
 
 A port of HTML5UP's responsive and minimal dimension theme.
 
-![Terminal](./images/screenshot.png)
+![Dimension](https://github.com/your-identity/hugo-theme-dimension/blob/master/images/screenshot.png?raw=1)
 
 ---
 

@@ -1,6 +1,6 @@
 name = "Dimension"
 license = "MIT"
-licenselink = "https://github.com/panr/hugo-theme-dimension/blob/master/LICENSE.md"
+licenselink = "https://github.com/your-identity/hugo-theme-dimension/blob/master/LICENSE.md"
 description = "A port of HTML5UP's dimension theme, optimized for markdown based CMS."
 homepage = "https://github.com/your-identity/hugo-theme-dimension/"
 tags = ["blog", "clean", "customizable", "dark", "highlighting", "minimal", "personal", "responsive", "simple"]

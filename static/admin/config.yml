@@ -4,7 +4,6 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
-
   - name: 'home'
     label: 'Home Page'
     folder: 'content/'
@@ -17,7 +16,6 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Background', name: 'background', widget: 'image' }
-
   - name: 'pages'
     label: 'Pages'
     folder: 'content/'
@@ -30,7 +28,6 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Background', name: 'background', widget: 'image' }
-
   - name: 'posts'
     label: 'Posts'
     folder: 'content/posts'

@@ -15,6 +15,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Logo', name: 'logo', widget: 'string' }
       - { label: 'Background', name: 'background', widget: 'image' }
   - name: 'pages'
     label: 'Pages'
@@ -27,7 +28,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Background', name: 'background', widget: 'image' }
   - name: 'posts'
     label: 'Posts'
     folder: 'content/posts'

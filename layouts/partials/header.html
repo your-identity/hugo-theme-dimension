@@ -9,4 +9,5 @@
     <style>
         :root{--site-background : url("{{ .Params.background | default "images/bg.jpg" | absURL }}")};
     </style> 
+    {{ partial "netlify-cms.html" .}}
 </head>

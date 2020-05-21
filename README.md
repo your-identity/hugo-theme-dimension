@@ -73,6 +73,6 @@ If you like my work and want to support the development of the project, now you 
 
 ## License
 
-Copyright © 202020 Davide Asnaghi
+Copyright © 2020 Davide Asnaghi
 
-The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
+The theme is released under the CC BY 3.0 License. Check the [original theme license](https://github.com/your-identity/hugo-theme-dimension/blob/master/LICENSE.md) for additional licensing information.

@@ -25,7 +25,9 @@
                             {{ range .Pages.ByDate }}
                                 {{if .Title }}
                                     {{if .Content}}
-                                        <li><a href="#{{ .Title | urlize }}">{{ .Title }}</a></li>
+                                        <li>
+                                            <a href="#{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">{{ .Title }}</a>
+                                        </li>
                                     {{ else }}
                                         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                                     {{ end }}
@@ -41,7 +43,7 @@
                     {{ range .Pages }}
                         {{if .Title }}
                             {{if .Content }}
-                                <article id="{{ .Title | urlize }}">
+                                <article id="{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">
                                     <h2 class="major">{{ .Title }}</h2>
                                     <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
                                     {{ .Content }}

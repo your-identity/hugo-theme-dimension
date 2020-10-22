@@ -67,7 +67,12 @@
 
 	// Main.
 		var	delay = 325,
-			locked = false;
+			locked = false,
+			nohash = false;
+
+		// Set nohash.
+			if (location.hash == '' || location.hash == '#')
+				nohash = true;
 
 		// Methods.
 			$main._show = function(id, initial) {
@@ -208,7 +213,7 @@
 				// Add state?
 					if (typeof addState != 'undefined'
 					&&	addState === true)
-						history.pushState(null, null, '#');
+						history.replaceState(null, null, '/');
 
 				// Handle lock.
 
@@ -295,7 +300,12 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							location.hash = '';
+							if (nohash) {
+								history.go(-1);
+							} else {
+								$main._hide(true);
+								nohash = true;
+							}
 						});
 
 				// Prevent clicks from inside article from bubbling.
@@ -308,9 +318,15 @@
 		// Events.
 			$body.on('click', function(event) {
 
-				// Article visible? Hide.
-					if ($body.hasClass('is-article-visible'))
-						$main._hide(true);
+				// Article visible? Go back. Hide when article is accessed first.
+					if ($body.hasClass('is-article-visible')) {
+						if (nohash) {
+							history.go(-1);
+						} else {
+							$main._hide(true);
+							nohash = true;
+						}
+					}
 
 			});
 

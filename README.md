@@ -50,6 +50,13 @@ to `config.toml` file in your Hugo root directory and change params fields.
 
 See the basic `_index.md` file params supported by the theme — https://github.com/your-identity/hugo-theme-dimension/blob/master/archetypes/_index.md
 
+```toml
+title: Your Name
+description: A great human
+background: "<path or link to image>"
+logo: "<path or link to image>"
+```
+
 ## How to run your site
 
 From your Hugo root directory run:

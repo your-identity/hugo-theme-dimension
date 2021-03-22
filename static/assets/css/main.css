@@ -635,6 +635,15 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon > img {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 3.5rem;
+			max-height: 3.5rem;
+			width: auto;
+			height: auto;
+		}
+
 /* Image */
 
 	.image {

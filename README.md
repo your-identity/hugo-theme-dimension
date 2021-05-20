@@ -73,7 +73,8 @@ Given the following repo structure:
   │   └── elements.md
   ├── static
   │   └── images
-  │       └── custom_bg.jpg  
+  │       ├── custom_bg.jpg  
+  │       └── custom_logo.svg
   └── archetypes
       └── default.md
 ```
@@ -84,6 +85,7 @@ Given the following repo structure:
   title: Your Name
   description: A great human
   background: "images/custom_bg.jpg"
+  logo: "images/custom_logo.svg"
   ---
 ```
 
@@ -93,10 +95,19 @@ Given the following repo structure:
   title: Posts
   description: A great human's posts
   background: "../images/custom_bg.jpg"
+  logo: "../images/custom_logo.svg"
   ---
 ```
 
-Follow the same conventions as demonstrated above for `logo`. 
+Both fields may also be a URL to an online asset, such as:
+```yaml
+  ---
+  title: Posts
+  description: A great human's posts
+  logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Font_Awesome_5_regular_gem.svg"
+  ---
+```
+
 ## How to run your site
 
 From your Hugo root directory run:

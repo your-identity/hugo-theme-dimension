@@ -60,9 +60,9 @@ logo: "<path or link to image>"
 
 ### `background` and `logo` Params
 
-As indicated above, `background` and `image` can be a jpg of your choice by placing JPGs, PNGs, SVGs, etc. in the `static` directory of your repository. If the `static` directory does not yet exist, create it. 
+As indicated above, `background` and `logo` can be an image of your choice by placing JPGs, PNGs, SVGs, etc. in the `static` directory of your repository. If the `static` directory does not yet exist, create it. 
 
-With the following repo structure:
+Given the following repo structure:
 ```
   .
   ├── config.toml
@@ -96,7 +96,7 @@ With the following repo structure:
   ---
 ```
 
-Follow the same conventions as above for `logo`. **Alternatively**, both `background` and `logo` can be URLs to online resources.
+Follow the same conventions as demonstrated above for `logo`. 
 ## How to run your site
 
 From your Hugo root directory run:

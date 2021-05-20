@@ -10,6 +10,7 @@ A hugo port of HTML5UP's responsive and minimal dimension theme. With native sup
   - [How to start](#how-to-start)
   - [How to configure](#how-to-configure)
   - [Post archetype](#post-archetype)
+    - [`background` and `logo` Params](#background-and-logo-params)
   - [How to run your site](#how-to-run-your-site)
   - [How to contribute](#how-to-contribute)
   - [Sponsoring](#sponsoring)
@@ -57,6 +58,45 @@ background: "<path or link to image>"
 logo: "<path or link to image>"
 ```
 
+### `background` and `logo` Params
+
+As indicated above, `background` and `image` can be a jpg of your choice by placing JPGs, PNGs, SVGs, etc. in the `static` directory of your repository. If the `static` directory does not yet exist, create it. 
+
+With the following repo structure:
+```
+  .
+  ├── config.toml
+  ├── content
+  │   ├── posts
+  │   │   └── _index.md
+  │   ├── _index.md
+  │   └── elements.md
+  ├── static
+  │   └── images
+  │       └── custom_bg.jpg  
+  └── archetypes
+      └── default.md
+```
+
+`static/images/custom_bg.jpg` can be referenced in `content/_index.md` as:
+```yaml
+  ---
+  title: Your Name
+  description: A great human
+  background: "images/custom_bg.jpg"
+  ---
+```
+
+...or in `content/posts/_index.md` as:
+```yaml
+  ---
+  title: Posts
+  description: A great human's posts
+  background: "../images/custom_bg.jpg"
+  ---
+```
+
+Follow the same conventions as above for `logo`. **Alternatively**, both `background` and `logo` can be URLs to online resources.
 ## How to run your site
 
 From your Hugo root directory run:

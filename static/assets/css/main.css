@@ -157,6 +157,10 @@ input, select, textarea {
 		color: inherit;
 	}
 
+	.logo a {
+		border-bottom: unset;
+	}
+
 		a:hover {
 			border-bottom-color: transparent;
 		}

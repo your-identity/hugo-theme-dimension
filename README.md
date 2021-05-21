@@ -10,6 +10,7 @@ A hugo port of HTML5UP's responsive and minimal dimension theme. With native sup
   - [How to start](#how-to-start)
   - [How to configure](#how-to-configure)
   - [Post archetype](#post-archetype)
+    - [`background` and `logo` Params](#background-and-logo-params)
   - [How to run your site](#how-to-run-your-site)
   - [How to contribute](#how-to-contribute)
   - [Sponsoring](#sponsoring)
@@ -55,6 +56,56 @@ title: Your Name
 description: A great human
 background: "<path or link to image>"
 logo: "<path or link to image>"
+```
+
+### `background` and `logo` Params
+
+As indicated above, `background` and `logo` can be an image of your choice by placing JPGs, PNGs, SVGs, etc. in the `static` directory of your repository. If the `static` directory does not yet exist, create it. 
+
+Given the following repo structure:
+```
+  .
+  ├── config.toml
+  ├── content
+  │   ├── posts
+  │   │   └── _index.md
+  │   ├── _index.md
+  │   └── elements.md
+  ├── static
+  │   └── images
+  │       ├── custom_bg.jpg  
+  │       └── custom_logo.svg
+  └── archetypes
+      └── default.md
+```
+
+`static/images/custom_bg.jpg` can be referenced in `content/_index.md` as:
+```yaml
+  ---
+  title: Your Name
+  description: A great human
+  background: "images/custom_bg.jpg"
+  logo: "images/custom_logo.svg"
+  ---
+```
+
+...or in `content/posts/_index.md` as:
+```yaml
+  ---
+  title: Posts
+  description: A great human's posts
+  background: "../images/custom_bg.jpg"
+  logo: "../images/custom_logo.svg"
+  ---
+```
+
+Both fields may also be a URL to an online asset, such as:
+```yaml
+  ---
+  title: Posts
+  description: A great human's posts
+  logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Font_Awesome_5_regular_gem.svg"
+  ---
 ```
 
 ## How to run your site

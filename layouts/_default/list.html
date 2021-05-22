@@ -49,7 +49,9 @@
                             {{if .Content }}
                                 <article id="{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">
                                     <h2 class="major">{{ .Title }}</h2>
-                                    <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
+                                    {{if .Params.image }}
+                                        <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
+                                    {{ end }}
                                     {{ .Content }}
                                 </article>
                             {{ end }}

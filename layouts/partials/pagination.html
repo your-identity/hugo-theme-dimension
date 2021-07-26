@@ -1,0 +1,15 @@
+{{ if ( or (.pagination.HasNext) (.pagination.HasPrev) ) }}
+    <div class="pagination">
+        {{ if .pagination.HasPrev }}
+            <a class="pagination-child" href="{{ .pagination.Prev.URL }}"><</a>
+        {{ else }}
+            <label class="pagination-child"></label>
+        {{ end }}
+        <label class="pagination-child">{{ .pagination.PageNumber }}/{{ .pagination.TotalPages }}</label>
+        {{ if .pagination.HasNext }}
+            <a class="pagination-child" href="{{ .pagination.Next.URL }}">></a>
+        {{ else }}
+            <label class="pagination-child"></label>
+        {{ end }}
+    </div>
+{{ end }}

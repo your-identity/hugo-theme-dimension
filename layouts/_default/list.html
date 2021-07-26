@@ -24,21 +24,27 @@
                             {{ end }}
                         </div>
                     </div>
+
+                    {{ $pagination := .Paginate ( .Pages.ByTitle ) }}
+
                     <nav>
                         <ul>
-                            {{ range .Pages.ByDate }}
+                            {{ range $pagination.Pages.ByParam "date" }}
                                 {{if .Title }}
                                     {{if .Content}}
                                         <li>
                                             <a href="#{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">{{ .Title }}</a>
                                         </li>
-                                    {{ else }}
+                                   {{ else }}
                                         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                                     {{ end }}
                                 {{ end }}
                             {{ end }}
                         </ul>
                     </nav>
+
+                    {{ partial "pagination.html" ( dict "context" . "pagination" $pagination ) }}
+
                 </header>
 
             <!-- Main -->

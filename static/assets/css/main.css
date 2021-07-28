@@ -1690,7 +1690,7 @@ input, select, textarea {
 	.pagination-child {
 		display: block;
 		width: 10rem;
-		margin: center;
+		margin: auto;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
 		-moz-user-select: none;

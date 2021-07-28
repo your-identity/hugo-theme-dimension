@@ -33,7 +33,7 @@
                                 {{if .Title }}
                                     {{if .Content}}
                                         <li>
-                                            <a href="#{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">{{ .Title }}</a>
+                                            <a href="#{{ cond (in (.Title|urlize) "%") (.Title | md5) (.Title | urlize) }}">{{ .Title }}</a>
                                         </li>
                                    {{ else }}
                                         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
@@ -53,7 +53,7 @@
                     {{ range .Pages }}
                         {{if .Title }}
                             {{if .Content }}
-                                <article id="{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">
+                                <article id="{{ cond (in (.Title|urlize) "%") (.Title | md5) (.Title | urlize) }}">
                                     <h2 class="major">{{ .Title }}</h2>
                                     <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
                                     {{ .Content }}

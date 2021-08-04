@@ -1672,3 +1672,29 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Pagination */ 
+	.pagination {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: nowrap;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.pagination-child {
+		display: block;
+		width: 10rem;
+		margin: auto;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		border-bottom: unset;
+	}

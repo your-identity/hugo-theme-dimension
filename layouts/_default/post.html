@@ -26,18 +26,8 @@
                     </div>
                     <nav>
                         <ul>
-                            {{ range .Pages.ByDate }}
-                                {{if .Title }}
-                                    {{if .Content}}
-                                        <li>
-                                            <a href="#{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">{{ .Title }}</a>
-                                        </li>
-                                    {{ else }}
-                                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                                    {{ end }}
-                                {{ end }}
-                            {{ end }}
-                            <li><a href="/tags">Tags</a></li>
+                            
+                            {{ partial "pagination" .}}
                         </ul>
                     </nav>
                 </header>
@@ -45,13 +35,15 @@
             <!-- Main -->
                 <div id="main">
 
-                    {{ range .Pages }}
+                    {{ range .Pages  }}
                         {{if .Title }}
                             {{if .Content }}
                                 <article id="{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">
                                     <h2 class="major">{{ .Title }}</h2>
+                                    
                                     <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
                                     {{ .Content }}
+                                    
                                 </article>
                             {{ end }}
                         {{ end }}
@@ -69,4 +61,3 @@
 </body>
 
 {{ partial "footer.html" .}}
-

@@ -1,0 +1,30 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        {{ if $pag.HasPrev }}
+        <li class="page-item"><a href="{{ $pag.Prev.URL }}" rel="prev" class="page-link">&laquo; Prev</a></li>
+        {{ end }}
+           {{ range .Paginator.Pages }}
+        
+        
+                    
+                                {{if .Title }}
+                                    {{if .Content}}
+                                        <li>
+                                            <a href="#{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">{{ .Title }}</a>
+                                        </li>
+                                                                    
+                           
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+        
+
+        {{ if $pag.HasNext }}
+        <li class="page-item"><a href="{{ $pag.Next.URL }}" rel="next" class="page-link">Next &raquo;</a></li>
+        {{ end }}
+   
+    </ul>
+</nav>
+{{ end }}

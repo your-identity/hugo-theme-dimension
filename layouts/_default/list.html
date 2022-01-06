@@ -10,7 +10,7 @@
                     <div class="logo">
                         <a href="/">
                             <span class="icon">
-                                <img src="{{ .Params.logo }}">
+                                <img src="{{ .Site.Params.logo }}">
                             </span>
                         </a>
                     </div>
@@ -37,6 +37,7 @@
                                     {{ end }}
                                 {{ end }}
                             {{ end }}
+                            <li><a href="/tags">Tags</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -68,3 +69,4 @@
 </body>
 
 {{ partial "footer.html" .}}
+

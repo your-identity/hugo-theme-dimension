@@ -1,0 +1,45 @@
+{{ partial "header.html" . }}
+<body class="is-preload">
+
+ <!-- Wrapper -->
+ <div id="wrapper">
+
+   <!-- Header -->
+   <header id="header">
+      <div class="logo">
+        <a href="/">
+          <span class="icon">
+            <img src= {{ .Site.Params.logo }}>
+          </span>
+        </a>
+      </div>
+        <div class="content">
+          <div class="inner">
+            <h1>{{ .Title | default "Title" }}</h1>
+              {{ if .Params.description }}
+                <p>
+                  {{ .Params.description }}
+                </p>
+              {{ end }}
+          </div>
+        </div>
+
+      <nav>
+        <ul>
+          {{ range .Data.Terms.Alphabetical }}
+            <li>
+              <a href="{{ .Page.Permalink }}">({{ .Count }}) {{ .Page.Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </header>
+  {{ partial "design.html" .}}
+ </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+</body>
+
+{{ partial "footer.html" . }}

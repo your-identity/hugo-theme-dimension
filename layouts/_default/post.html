@@ -1,0 +1,63 @@
+{{ partial "header.html" . }}
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="/">
+                            <span class="icon">
+                                <img src="{{ .Site.Params.logo }}">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="inner">
+                            <h1>{{ .Title | default "Title" }}</h1>
+                            {{ if .Params.description }}
+                            <p>
+                                {{ .Params.description }}
+                            </p>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            
+                            {{ partial "pagination" .}}
+                        </ul>
+                    </nav>
+                </header>
+
+            <!-- Main -->
+                <div id="main">
+
+                    {{ range .Pages  }}
+                        {{if .Title }}
+                            {{if .Content }}
+                                <article id="{{ cond (in (.Title|urlize) "%") (.Title | base64Encode) (.Title) | urlize }}">
+                                    <h2 class="major">{{ .Title }}</h2>
+                                    
+                                    <span class="image main"><img src="{{ .Params.image }}" alt="" /></span>
+                                    {{ .Content }}
+                                    
+                                </article>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+
+                </div>
+
+                {{ partial "design.html" .}}
+
+        </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+</body>
+
+{{ partial "footer.html" .}}

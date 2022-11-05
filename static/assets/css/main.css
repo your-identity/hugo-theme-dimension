@@ -203,13 +203,13 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-size: 2.25rem;
+		font-size: 4.25rem;
 		line-height: 1.3;
 		letter-spacing: 0.5rem;
 	}
 
 	h2 {
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
 	}
@@ -642,8 +642,8 @@ input, select, textarea {
 		.icon > img {
 			display: inline-block;
 			vertical-align: middle;
-			max-width: 3.5rem;
-			max-height: 3.5rem;
+			max-width: 5rem;
+			max-height: 5rem;
 			width: auto;
 			height: auto;
 		}
@@ -651,7 +651,7 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border-radius: 4px;
+		border-radius: 10px;
 		border: 0;
 		display: inline-block;
 		position: relative;
@@ -661,7 +661,7 @@ input, select, textarea {
 			pointer-events: none;
 			background-image: url("../../images/overlay.png");
 			background-color: rgba(19, 21, 25, 0.5);
-			border-radius: 4px;
+			border-radius: 5px;
 			content: '';
 			display: block;
 			height: 100%;
@@ -669,7 +669,7 @@ input, select, textarea {
 			opacity: 0.5;
 			position: absolute;
 			top: 0;
-			width: 100%;
+			width: 140%;
 		}
 
 		.image img {
@@ -1306,13 +1306,13 @@ input, select, textarea {
 		#header .logo {
 			width: 5.5rem;
 			height: 5.5rem;
-			line-height: 5.5rem;
+			line-height: 5.23rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
 		}
 
 			#header .logo .icon:before {
-				font-size: 2rem;
+				font-size: 3rem;
 			}
 
 		#header .content {
@@ -1370,15 +1370,18 @@ input, select, textarea {
 				}
 
 				#header nav ul li a {
-					display: block;
+					display: block ;
 					min-width: 7.5rem;
 					height: 2.75rem;
 					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
+					padding: 0 2.5rem 0 2.24rem;
 					text-transform: uppercase;
 					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
+					font-size: 0.9rem;
 					border-bottom: 0;
+					font-size: 1.4rem;
+					text-align: center;
+					font-weight: bold;
 				}
 
 					#header nav ul li a:hover {
@@ -1502,10 +1505,10 @@ input, select, textarea {
 						}
 
 						#header nav ul li a {
-							height: 3rem;
-							line-height: 3rem;
+							height: 10rem;
+							line-height: 10rem;
 							min-width: 0;
-							width: 100%;
+							width: 200%;
 						}
 
 				#header nav.use-middle:after {
@@ -1555,9 +1558,9 @@ input, select, textarea {
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+			padding: 2.5rem 1.5rem 1.5rem 2.5rem ;
 			position: relative;
-			width: 40rem;
+			width: 45rem;
 			max-width: 100%;
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
@@ -1597,7 +1600,7 @@ input, select, textarea {
 					left: 0.75rem;
 					width: 2.5rem;
 					height: 2.5rem;
-					border-radius: 100%;
+					border-radius: 50%;
 					background-position: center;
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
 					background-size: 20px 20px;
@@ -1652,7 +1655,7 @@ input, select, textarea {
 		#footer .copyright {
 			letter-spacing: 0.2rem;
 			font-size: 0.6rem;
-			opacity: 0.75;
+			opacity: 0.05;
 			margin-bottom: 0;
 			text-transform: uppercase;
 		}
